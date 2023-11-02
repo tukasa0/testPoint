@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\宿題1\otosidama.cpp" />
+    <ClCompile Include="..\宿題\shuffle.cpp" />
     <ClCompile Include="testPoint.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
