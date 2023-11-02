@@ -25,6 +25,16 @@ int main()
 
 	int* student = new int[people];
 	
+	if (student == NULL)
+	{
+		*student = 0;
+		cout << *student << endl;
+
+		delete[] student;
+	}
+
 	Average(student, people);
+
+	delete[] student;
 		
 }
