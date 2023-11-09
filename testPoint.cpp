@@ -2,7 +2,7 @@
 #include <cstdio>
 using namespace std;
 
-void Average(int* student, int people)
+double Average(int* student, int people)
 {
 	double total = 0;
 
@@ -13,8 +13,8 @@ void Average(int* student, int people)
 
 		total += *(student + i);
 	}
-	
-	printf("平均点は%.1f点です。", total / people);
+
+	return total / people;
 }
 
 int main()
@@ -33,7 +33,7 @@ int main()
 		delete[] student;
 	}
 
-	Average(student, people);
+	cout << "平均点は" << Average(student, people) << "点です。" << endl;
 
 	delete[] student;
 		
