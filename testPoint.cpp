@@ -24,17 +24,17 @@ int main()
 	cin >> people;
 
 	int* student = new int[people];
-	
-	if (student == NULL)
-	{
-		*student = 0;
-		cout << *student << endl;
-
-		delete[] student;
-	}
 
 	cout << "平均点は" << Average(student, people) << "点です。" << endl;
 
-	delete[] student;
+	if (student != NULL)
+	{
+		for (int i = 0; i < people; ++i)
+		{
+			*(student + i) = 0;
+			cout << *(student + i) << flush;
+		}
+		delete[] student;
+	}
 		
 }
